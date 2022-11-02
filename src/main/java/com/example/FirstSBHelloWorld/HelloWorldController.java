@@ -1,4 +1,4 @@
-package com.example.FirstSBHelloWorld;
+package com.example.firstspringboot_helloworld;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,13 +14,13 @@ public class HelloWorldController {
     @GetMapping("/hello")
     public String hello() {
         String message = "hello world!";
-        return  message;
+        return message;
     }
 
     @GetMapping("/time")
     public Map<String, String> time() {
         Map<String, String> replyMap = new HashMap<String, String>();
-        replyMap.put("Greeting", "hello world!");
+        replyMap.put("greeting", "hello world!");
 
         String formatNowDate = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH時mm分ss秒 E曜日").format(LocalDateTime.now());
 
